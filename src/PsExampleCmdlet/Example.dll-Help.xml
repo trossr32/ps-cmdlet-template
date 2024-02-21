@@ -11,49 +11,26 @@
     <command:noun>Example</command:noun>
     <maml:description>
       <maml:para>
-        Moves files from all sub-directories to the parent directory and optionally delete sub-directories.
+        An example Powershell Cmdlet.
       </maml:para>
     </maml:description>
   </command:details>
   <maml:description>
     <maml:para>
-      Moves files from all sub-directories to the parent directory. If files with duplicate names are found then their file name will have a GUID appended to make them unique.
-    </maml:para>
-    <maml:para>
-      Supports WhatIf. If supplied this will output a formatted table of the from and to file locations that will result from running the cmdlet.
-    </maml:para>
-    <maml:para>
-      Can be run against:
-    </maml:para>
-    <maml:para>
-      &gt; a single directory
-    </maml:para>
-    <maml:para>
-      &gt; a collection of directories piped into the module.
+      Example description.
     </maml:para>
   </maml:description>
   <command:parameters>
     <command:parameter required="false" pipelineInput="false" variableLength="true" position="0" aliases="D">
-      <maml:name>Directory</maml:name>
+      <maml:name>Thing</maml:name>
       <maml:description>
         <maml:para>
-          The parent directory where files from all sub-directories will be moved. If neither this nor the Directories parameter are set then the current location will be used.
+          A thing string.
         </maml:para>
       </maml:description>
       <command:parameterValue required="false" variableLength="true">String</command:parameterValue>
       <dev:type>String</dev:type>
-      <dev:defaultvalue>Current directory</dev:defaultvalue>
-    </command:parameter>
-    <command:parameter required="false" pipelineInput="true" variableLength="true" aliases="none">
-      <maml:name>Directories</maml:name>
-      <maml:description>
-        <maml:para>
-          A collection of parent directories where files from all sub-directories will be moved. If neither this nor the Directory parameter are set then the current location will be used.
-        </maml:para>
-      </maml:description>
-      <command:parameterValue required="false" variableLength="true">List&lt;String&gt;</command:parameterValue>
-      <dev:type>List&lt;String&gt;</dev:type>
-      <dev:defaultValue>None</dev:defaultValue>
+      <dev:defaultvalue>None</dev:defaultvalue>
     </command:parameter>
     <command:parameter required="false" pipelineInput="false" variableLength="false" aliases="F">
       <maml:name>WhatIf</maml:name>
@@ -67,10 +44,10 @@
       <dev:defaultValue>None</dev:defaultValue>
     </command:parameter>
     <command:parameter required="false" pipelineInput="false" variableLength="false" aliases="DS">
-      <maml:name>DeleteSubDirectories</maml:name>
+      <maml:name>Terminate</maml:name>
       <maml:description>
         <maml:para>
-          If supplied all subdirectories will be deleted once all files have been moved.
+          Create error.
         </maml:para>
       </maml:description>
       <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
@@ -80,38 +57,11 @@
   </command:parameters>
   <command:examples>
     <command:example>
-      <maml:title>Example 1: No parameters</maml:title>
+      <maml:title>Example 1: Example of an example</maml:title>
       <dev:code>PS C:\&gt; Invoke-Example</dev:code>
       <dev:remarks>
         <maml:para>
-          All files in all sub-directories in the current location (C:\) will be moved to the current location (C:\).
-        </maml:para>
-      </dev:remarks>
-    </command:example>
-    <command:example>
-      <maml:title>Example 2: Using the Force switch</maml:title>
-      <dev:code>PS C:\&gt; Invoke-Example -Directory "C:\Videos" -WhatIf</dev:code>
-      <dev:remarks>
-        <maml:para>
-          Displays an output table to terminal detailing that all files in all sub-directories in C:\Videos\ would be moved to C:\Videos\.
-        </maml:para>
-      </dev:remarks>
-    </command:example>
-    <command:example>
-      <maml:title>Example 3: Using the DeleteSubDirectories switch</maml:title>
-      <dev:code>PS C:\&gt; Invoke-Example -Directory "C:\Videos" -DeleteSubDirectories</dev:code>
-      <dev:remarks>
-        <maml:para>
-          All files in all sub-directories in C:\Videos\ will be moved to C:\Videos\ and all sub-directories will be deleted once the files have been moved.
-        </maml:para>
-      </dev:remarks>
-    </command:example>
-    <command:example>
-      <maml:title>Example 4: Piping input</maml:title>
-      <dev:code>PS C:\&gt; "C:\Videos\","C:\Music\" | Invoke-Example</dev:code>
-      <dev:remarks>
-        <maml:para>
-          All files in all sub-directories in the piped array of directories (C:\Videos\ and C:\Music\) will be moved to their respective parents.
+          Example of an example.
         </maml:para>
       </dev:remarks>
     </command:example>

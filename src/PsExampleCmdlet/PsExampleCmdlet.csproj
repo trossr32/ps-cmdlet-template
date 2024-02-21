@@ -9,7 +9,7 @@
     <DocumentationFile>C:\Users\Rob\GitHub\ps-example-cmdlet\src\PsExampleCmdlet\Example.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="PowerShellStandard.Library" Version="7.0.0-preview.1" />
+    <PackageReference Include="System.Management.Automation" Version="7.4.1" />
     <PackageReference Include="System.Security.Permissions" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>

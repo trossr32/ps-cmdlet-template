@@ -13,11 +13,13 @@ on:
 
 env:
   SOLUTION_PATH: 'src/PsExampleCmdlet.sln'
-  EXCLUDE_PACKAGES: 'Microsoft.VisualStudio.Azure.Containers.Tools.Targets'
+  EXCLUDE_PACKAGES: 'Microsoft.VisualStudio.Azure.Containers.Tools.Targets System.Management.Automation'
 
 jobs:
   outdated-packages-check:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
 
     steps:
       - uses: trossr32/outdated-packages-action@v1.6.0
