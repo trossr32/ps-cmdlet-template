@@ -36,7 +36,7 @@
       <maml:name>WhatIf</maml:name>
       <maml:description>
         <maml:para>
-          If supplied this will output a formatted table of the from and to file locations that will result from running the cmdlet.
+          A switch parameter.
         </maml:para>
       </maml:description>
       <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
