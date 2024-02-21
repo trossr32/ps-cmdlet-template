@@ -1,0 +1,27 @@
+name: Outdated package checks
+
+# Run workflow on pull request to the main branch
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [ master, main ]
+    paths:
+      - '.github/workflows/outdated.yml'
+      - 'src/**'
+  
+  workflow_dispatch:
+
+env:
+  SOLUTION_PATH: 'src/PsExampleCmdlet.sln'
+  EXCLUDE_PACKAGES: 'Microsoft.VisualStudio.Azure.Containers.Tools.Targets'
+
+jobs:
+  outdated-packages-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: trossr32/outdated-packages-action@v1.6.0
+        with:
+          use-dotnet-outdated: true
+          dotnet-solution-or-project-path: ${{ env.SOLUTION_PATH }}
+          dotnet-exclude-packages: ${{ env.EXCLUDE_PACKAGES }}
