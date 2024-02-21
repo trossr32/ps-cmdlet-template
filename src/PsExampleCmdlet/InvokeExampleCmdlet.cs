@@ -44,7 +44,7 @@ public class InvokeExampleCmdlet : PSCmdlet
 
     /// <summary>
     /// <para type="description">
-    /// Create error
+    /// Create error.
     /// </para>
     /// </summary>
     [Parameter(Mandatory = false)]

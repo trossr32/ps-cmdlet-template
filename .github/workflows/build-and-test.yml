@@ -1,8 +1,7 @@
 name: Build and test
 on: 
   pull_request:
-    branches:
-      - [main, master]
+    branches: [ main, master ]
 
   workflow_dispatch:
 
